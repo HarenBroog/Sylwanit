@@ -1,6 +1,25 @@
-"dependencies": {
+{
+  "name": "Sylwanit",
+  "version": "1.0.0",
+  "description": "== README",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
     "bower": "0.6.x"
-},
-"scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "scripts": {
+    "postinstall": "rake bower:install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HarenBroog/Sylwanit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarenBroog/Sylwanit/issues"
+  },
+  "homepage": "https://github.com/HarenBroog/Sylwanit"
 }
