@@ -5,7 +5,7 @@
     "bower": ">=0.10.0"
   },
   "engine": {
-    "node": "0.10.x",
+    "node": "0.10.x"
   },
   "scripts": {
   }
