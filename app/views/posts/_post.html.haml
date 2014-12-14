@@ -1,0 +1,23 @@
+.post.text-box
+  .title
+    .row
+      .col-md-3
+        .h4
+          %strong Title:
+          = post.title
+      .col-md-4
+        .h4
+          %strong Author:
+          = link_to post.owner.email, user_path(post.owner)
+    %hr
+  .body= post.body
+  .post-comments
+    .post-comments-header
+      %i.fa.fa-comments.fa-lg
+      %h4.dib Comments:
+      = link_to new_post_comment_path(post), class: 'btn btn-default pull-right' do
+        %i.fa.fa-plus Add comment
+    .post-comments-content
+      = render post.comments
+
+

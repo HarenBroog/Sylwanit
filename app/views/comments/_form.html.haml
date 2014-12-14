@@ -1,0 +1,13 @@
+= simple_form_for comment, url: post_comments_path, html: { class: 'col-md-12'} do |f|
+  .col-md-3= f.label :author
+  .col-md-9= f.association :author, readonly: true, label_method: :email, default: current_user, label: false
+
+  =f.hidden_field :post_id, value: post.id
+
+  .col-md-3= f.label :body
+  .col-md-9= f.input :body, label: false
+
+  .col-md-12
+    %hr
+
+  .col-md-9.col-md-offset-3= f.button :submit

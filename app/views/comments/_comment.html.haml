@@ -1,0 +1,6 @@
+.comment
+  .comment-author
+    %strong Author:
+    = link_to comment.author.email, user_path(comment.author)
+  .comment-body
+    = comment.body

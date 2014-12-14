@@ -1,0 +1,19 @@
+.navbar
+  border-bottom: 1px solid #ccc
+
+  .avatar
+    width: 40px
+    height: 40px
+    margin: 1% 1px
+    background: $light-gray
+
+  .navbar-brand
+    text-shadow: 1px 1px 5px #A1A1A1
+
+  ul.nav > li, a.navbar-brand
+    @include transition(all 100ms ease-in-out)
+
+    &:hover, &:active
+      border-bottom: 3px solid $navbar-link-border-hover
+      a
+        margin-bottom: -3px
