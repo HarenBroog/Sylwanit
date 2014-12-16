@@ -13,12 +13,15 @@
         Currently waiting confirmation for: #{resource.unconfirmed_email}
     = f.input :first_name
     = f.input :last_name
-    = f.input :password, autocomplete: 'off', hint: "(leave blank if you don't want to change it)"
-    = f.input :password_confirmation, autocomplete: 'off'
+    = f.input :layout, collection: %w(red blue violet calm), include_blank: false, selected: current_user.layout
+    / .col-sm-12
+    /   %hr
+    / = f.input :password, autocomplete: 'off', hint: "(leave blank if you don't want to change it)"
+    / = f.input :password_confirmation, autocomplete: 'off'
 
-    .col-sm-12
-      %hr
-    = f.input :current_password, autocomplete: 'off', hint: '(we need your current password to confirm your changes)'
+    / .col-sm-12
+    /   %hr
+    / = f.input :current_password, autocomplete: 'off', hint: '(we need your current password to confirm your changes)'
     .col-sm-12
       %hr
     .form-group
