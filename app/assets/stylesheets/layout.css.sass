@@ -3,13 +3,23 @@ body, html
 
 body
   padding-top: 50px
-  @include background-image(linear-gradient(to left, rgba(0,0,0,0.02), rgba(0,0,0,0.04), rgba(0,0,0,0.04), rgba(0,0,0,0.04), rgba(0,0,0,0.04), rgba(0,0,0,0.04), rgba(0,0,0,0.02)))
+  background-image: url('background1.jpg')
+  background-attachment: fixed
+
+  color: $font-color
+  text-shadow: 0 1px 1px #000
+  font-family: $font-stack
+  font-weight: $font-weight-bold
+  font-size: 1.05em
 
 a
-  color: #000000
+  color: $font-color
+
   &:hover
+    color: $font-color
+    text-shadow: 0 -2px -2px #000
+    text-shadow: 0 2px 2px #000
     text-decoration: none
-    color: #000000
 
 i
   margin-left: 2px
@@ -19,23 +29,20 @@ i
   a
     display: block
 
-.dib
-  display: inline-block
-
 .content
   height: 100%
 
 .form
-  border: 1px solid $navbar-link-border-hover
-  border-radius: $border-radius
+  border: $form-border-width solid $form-border-color
+  border-radius: $form-border-radius
   margin-top: 15px
   margin-bottom: 15px
 
   hr
     margin: 0 -15px
     border: 0
-    height: 1px
-    background: $navbar-link-border-hover
+    height: 2px
+    background: $form-border-color
 
   form
     padding: 15px 0px
@@ -44,8 +51,8 @@ i
       margin: 0 -30px
       margin-bottom: 15px
       border: 0
-      height: 1px
-      background: $navbar-link-border-hover
+      height: 2px
+      background: $form-border-color
 
     input.btn
       width: 100%
@@ -53,10 +60,8 @@ i
 
   .title
     padding: 20px 15px
-    font-weight: bold
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: $font-weight-bolder
     font-size: 24px
-
 
 
 .text-box

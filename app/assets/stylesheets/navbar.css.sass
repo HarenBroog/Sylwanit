@@ -1,5 +1,44 @@
 .navbar
-  border-bottom: 1px solid #ccc
+  +border-image(linear-gradient(to left, rgba(0,0,0,.3), rgba(44,44,0,.7), rgba(0,0,0,.3)) 0 0 50 50 stretch stretch)
+  +border-bottom-only(4px)
+  z-index: 4
+
+  *
+    z-index: 4
+
+
+  &::after, &::before
+    position: absolute
+    top: 0
+    left: 0
+    height: $navbar-heigth
+    width: 100%
+
+  &::after
+    background: url(background1.jpg)
+    z-index: 2
+
+  &::before
+    background-color: $navbar-background-color
+
+    z-index: 3
+
+  ul.nav > li
+    @include transition(all 100ms ease-in-out)
+    color: $navbar-link-color
+
+    > a
+      color: $navbar-link-color
+      font-size: 1.5em
+      font-weight: $font-weight-bolder
+
+    &:hover, &.open
+      border-bottom: 4px solid $navbar-link-border-hover
+      margin-bottom: -4px
+
+      > a
+        background-color: $navbar-link-background-hover
+
 
   .avatar
     width: 40px
@@ -7,13 +46,13 @@
     margin: 1% 1px
     background: $light-gray
 
-  .navbar-brand
-    text-shadow: 1px 1px 5px #A1A1A1
+  ul.dropdown-menu a
+    color: #000
+    font-weight: $font-weight-thin
+    text-shadow: none
 
-  ul.nav > li, a.navbar-brand
-    @include transition(all 100ms ease-in-out)
 
-    &:hover, &:active
-      border-bottom: 3px solid $navbar-link-border-hover
-      a
-        margin-bottom: -3px
+
+
+
+

@@ -1,15 +1,15 @@
-%nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+%nav.navbar.navbar-fixed-top{:role => "navigation"}
   .container
     .row.col-md-12
-      .navbar-header
-        = link_to root_path, class: 'navbar-brand' do
-          %i.fa.fa-wheelchair.fa-lg
-          %strong Sylwanit
       %ul.nav.navbar-nav
+        %li.brand
+          = link_to root_path do
+            %i.fa.fa-wheelchair.fa-lg
+            %strong Sylwanit
         - if user_signed_in?
           %li
             = link_to users_path do
-              %i.fa.fa-user.fa-lg
+              %i.fa.fa-users.fa-lg
               %strong Users
           %li
             = link_to posts_path do
