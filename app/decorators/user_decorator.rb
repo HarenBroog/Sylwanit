@@ -5,4 +5,8 @@ class UserDecorator < Draper::Decorator
     "#{object.first_name} #{object.last_name}"
   end
 
+  def background_url
+    "background-#{object.layout}.jpg"
+  end
+
 end
