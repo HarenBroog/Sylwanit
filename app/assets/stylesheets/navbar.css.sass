@@ -1,26 +1,24 @@
 .navbar
-  +border-image(linear-gradient(to left, rgba(0,0,0,.3), rgba(44,44,0,.7), rgba(0,0,0,.3)) 0 0 50 50 stretch stretch)
-  +border-bottom-only(4px)
+  border-bottom: 4px solid rgba(0,0,0,.15)
   z-index: 4
 
   *
     z-index: 4
 
-
   &::after, &::before
     position: absolute
     top: 0
     left: 0
-    height: $navbar-heigth
     width: 100%
 
   &::after
     background: url(background1.jpg)
     z-index: 2
+    height: $navbar-heigth + 1px
 
   &::before
     background-color: $navbar-background-color
-
+    height: $navbar-heigth
     z-index: 3
 
   ul.nav > li
@@ -29,7 +27,7 @@
 
     > a
       color: $navbar-link-color
-      font-size: 1.5em
+      font-size: $navbar-font-size
       font-weight: $font-weight-bolder
 
     &:hover, &.open
@@ -50,6 +48,7 @@
     color: #000
     font-weight: $font-weight-thin
     text-shadow: none
+    font-size: $navbar-font-size -2em
 
 
 
