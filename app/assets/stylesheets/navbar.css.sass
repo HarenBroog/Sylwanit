@@ -12,14 +12,14 @@
     width: 100%
 
   &::after
-    background: url(background1.jpg)
-    z-index: 2
+    background-color: $navbar-background-color
+    z-index: 3
     height: $navbar-heigth + 1px
 
   &::before
-    background-color: $navbar-background-color
+    background-image: $background-image
     height: $navbar-heigth
-    z-index: 3
+    z-index: 2
 
   ul.nav > li
     @include transition(all 100ms ease-in-out)
