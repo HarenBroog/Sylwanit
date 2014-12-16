@@ -1,7 +1,7 @@
 .category
   display: block
-  border-radius: 6px
-  border: 1px solid $dark-gray
+  border-radius: $border-radius
+  border: 1px solid $border-color
   margin-bottom: 5px
   cursor: pointer
   @include transition(all 100ms ease-in-out)
@@ -10,12 +10,16 @@
     @include scale($scale-factor)
 
   .category-name
-    padding: 1px 15px
+    padding: auto 15px
+    margin: 1% 0
+    font-size: $font-size+1.5em
 
   .category-icon
-    background: $very-light-gray
+    background: $icon-background
     border-right: 1px solid $dark-gray
     i
       margin: 8px 30%
+      font-size: $font-size+2em
+
 
 
