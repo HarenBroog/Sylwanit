@@ -1,16 +1,23 @@
 .category
   display: block
-  border-radius: 4px
+  border-radius: 6px
   border: 1px solid $dark-gray
   margin-bottom: 5px
+  cursor: pointer
+  @include transition(all 100ms ease-in-out)
+
+  &:hover
+    @include scale(1.04)
 
   .category-name
     font-size: 30px
     color: $very-dark-gray
     padding: 1px 15px
-    border-left: 1px solid $dark-gray
 
-  i
-    margin: 8px 10px
+  .category-icon
+    background: $very-light-gray
+    border-right: 1px solid $dark-gray
+    i
+      margin: 8px 30%
 
 
