@@ -10,14 +10,35 @@ $light-green: #62FF3A
 $dark-green: #26B300
 $very-light-green: #9DFF8C
 
+$border-radius: 4px
+$scale-factor: 1.035
+
+$font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+$font-color: #fff
+$font-weight-thin: 500
+$font-weight-bold: 700
+$font-weight-bolder: 900
 
 $body-background:           #FCFFE6
 $content-background:        #F1F5D5
 
 $text-box-background-color: $very-light-gray
+$text-box-border-radius: $border-radius
 
-$navbar-background-color:   $very-light-gray
+$navbar-heigth: 50px
+$navbar-background-color:   rgba(0,0,0,.05)
+$navbar-link-color:        #fff
+$navbar-link-background-hover:        rgba(255,255,255,0.2)
 $navbar-link-border:        $light-gray
-$navbar-link-border-hover:  $dark-gray
+$navbar-link-border-hover:  #fff
 
-$border-radius: 4px
+
+$form-border-color: #fff
+$form-border-width: 2px
+$form-border-radius: $border-radius
+
+=border-bottom-only($width)
+  border-width: 0px 0px $width 0px !important
+  // border-top-style: none !important
+  // border-left-style: none !important
+  // border-right-style: none !important
