@@ -30,7 +30,14 @@ group :production do
 end
 
 group :development do
+  gem 'did_you_mean'
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'spring'
+end
+
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
