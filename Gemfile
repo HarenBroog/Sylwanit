@@ -10,7 +10,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'haml-rails'
 
-gem 'asset_sync'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'bourbon'
