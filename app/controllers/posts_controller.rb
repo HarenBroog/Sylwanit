@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   expose(:category) { Category.find_by_id(params[:category_id]) }
   expose(:post, attributes: :post_params)
-  expose(:posts) { Post.where(category_id: category.try(:id)) }
+  expose(:posts) { category ? category.posts : Post.all }
 
   def index
   end
