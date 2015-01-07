@@ -1,3 +1,37 @@
 .content
   margin-top: 10px
 
+.promoted-posts, .categories
+  &:hover .title
+    color: $star-color-dark
+
+    i
+      color: $star-color
+
+  .post
+    padding: 4px
+    @include border-hover($star-color)
+
+    a:hover
+      color: $star-color
+
+  .category
+    display: block
+    margin-bottom: 5px
+    margin-right: 5px
+    cursor: pointer
+    @include border-hover($border-color)
+
+    .category-name
+      padding: auto 15px
+      margin: 1% 0
+      font-size: $font-size+1.5em
+
+    .category-icon
+      background: $transparent-background
+      border-right: 1px solid $dark-gray
+
+      i
+        margin: 8px 30%
+        font-size: $font-size+2em
+

@@ -1,25 +1,7 @@
 .navbar
   border-bottom: 4px solid rgba(0,0,0,.15)
-  z-index: 4
-
-  *
-    z-index: 4
-
-  &::after, &::before
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-
-  &::after
-    background-color: $navbar-background-color
-    z-index: 3
-    height: $navbar-heigth + 1px
-
-  &::before
-    background-image: inherit
-    height: $navbar-heigth
-    z-index: 2
+  height: $navbar-heigth + 5px
+  background-color: $navbar-background-color
 
   ul.nav > li
     @include transition(all 100ms ease-in-out)
@@ -32,23 +14,30 @@
 
     &:hover, &.open
       border-bottom: 4px solid $navbar-link-border-hover
-      margin-bottom: -4px
+      margin-bottom: -5px
 
       > a
         background-color: $navbar-link-background-hover
 
+  .dropdown-toggle
+    padding: 0 15px
+    height: $navbar-heigth
 
-  .avatar
-    width: 40px
-    height: 40px
-    margin: 1% 1px
-    background: $light-gray
+    *
+      margin: auto 0
+
+    .avatar
+      border: $avatar-border-width solid $avatar-border-color
+      border-radius: $border-radius
+      margin: ($navbar-heigth - $avatar-size - 2*$avatar-border-width)/2 0
+      display: inline-block
+      box-shadow: 1px 1px 1px 1px #000
 
   ul.dropdown-menu a
     color: #000
     font-weight: $font-weight-thin
     text-shadow: none
-    font-size: $navbar-font-size -2em
+    font-size: $navbar-font-size - 0.9em
 
 
 
