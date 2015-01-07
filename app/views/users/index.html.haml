@@ -1,9 +1,11 @@
 .h1 User list:
-%table.table.table-striped.table-hover
-  %thead
-    %tr
-      %td First name
-      %td Last name
-      %td Email
-  %tbody
-    = render users
+.row.h3
+  .col-xs-1
+    Avatar:
+  .col-xs-2
+    First name:
+  .col-xs-2
+    Last name:
+  .col-xs-3
+    Email:
+= render users
