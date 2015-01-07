@@ -10802,49 +10802,14 @@ button.close {
   content: "\f20c";
 }
 
-/* line 1, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/categories.css.sass */
-.category {
-  display: block;
-  border-radius: 4px;
-  border: 1px solid white;
-  margin-bottom: 5px;
-  cursor: pointer;
-  -webkit-transition: all 100ms ease-in-out;
-  transition: all 100ms ease-in-out;
-}
-/* line 9, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/categories.css.sass */
-.category:hover {
-  -webkit-transform: scale(1.035);
-  -ms-transform: scale(1.035);
-  transform: scale(1.035);
-}
-/* line 12, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/categories.css.sass */
-.category .category-name {
-  padding: auto 15px;
-  margin: 1% 0;
-  font-size: 2.55em;
-}
-/* line 17, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/categories.css.sass */
-.category .category-icon {
-  background: rgba(0, 0, 0, 0.2);
-  border-right: 1px solid #bababa;
-}
-/* line 20, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/categories.css.sass */
-.category .category-icon i {
-  margin: 8px 30%;
-  font-size: 3.05em;
-}
-
 /* line 1, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/comments.css.sass */
 .comment {
-  margin: 2px;
-  background: white;
   border-style: solid;
   border-width: 1px;
   border-color: #dfdfdf;
   border-radius: 4px;
 }
-/* line 9, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/comments.css.sass */
+/* line 7, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/comments.css.sass */
 .comment .comment-author {
   margin: -3px -1px 0px;
   background: #d2d2d2;
@@ -10857,7 +10822,7 @@ button.close {
 /* line 1, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/form.css.sass */
 .form {
   border: 2px solid white;
-  border-radius: 4px;
+  border-radius: 3px;
   box-shadow: 4px 4px 10px 1px black;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -10902,6 +10867,66 @@ button.close {
   margin-top: 10px;
 }
 
+/* line 5, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/home.css.sass */
+.promoted-posts:hover .title, .categories:hover .title {
+  color: #ffea4c;
+}
+/* line 8, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/home.css.sass */
+.promoted-posts:hover .title i, .categories:hover .title i {
+  color: #ffe000;
+}
+/* line 11, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/home.css.sass */
+.promoted-posts .post, .categories .post {
+  padding: 4px;
+  border: 1px solid white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px 1px black;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+/* line 15, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/mixins.css.sass */
+.promoted-posts .post:hover, .categories .post:hover {
+  border: 1px solid #ffe000;
+  box-shadow: 2px 2px 10px 2px black;
+}
+/* line 15, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/home.css.sass */
+.promoted-posts .post a:hover, .categories .post a:hover {
+  color: #ffe000;
+}
+/* line 18, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/home.css.sass */
+.promoted-posts .category, .categories .category {
+  display: block;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px 1px black;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+/* line 15, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/mixins.css.sass */
+.promoted-posts .category:hover, .categories .category:hover {
+  border: 1px solid white;
+  box-shadow: 2px 2px 10px 2px black;
+}
+/* line 25, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/home.css.sass */
+.promoted-posts .category .category-name, .categories .category .category-name {
+  padding: auto 15px;
+  margin: 1% 0;
+  font-size: 2.55em;
+}
+/* line 30, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/home.css.sass */
+.promoted-posts .category .category-icon, .categories .category .category-icon {
+  background: rgba(0, 0, 0, 0.2);
+  border-right: 1px solid #bababa;
+}
+/* line 34, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/home.css.sass */
+.promoted-posts .category .category-icon i, .categories .category .category-icon i {
+  margin: 8px 30%;
+  font-size: 3.05em;
+}
+
 /* line 1, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 body, html {
   height: 100%;
@@ -10911,74 +10936,82 @@ body, html {
 body {
   padding-top: 60px;
   background-image: url("background-blue.jpg");
-  background-attachment: fixed;
   color: white;
-  text-shadow: 0 1px 1px black;
+  text-shadow: 1px 1px 1px black;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 1.05em;
 }
 
-/* line 15, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 14, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 a {
   color: white;
 }
-/* line 18, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
-a:hover {
+/* line 17, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+a:hover, a:visited {
   color: white;
-  text-shadow: 0 -2px -2px black;
   text-shadow: 0 2px 2px black;
   text-decoration: none;
 }
+/* line 22, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+a:hover .avatar, a:visited .avatar {
+  box-shadow: 1px 1px 5px 1px black !important;
+}
 
-/* line 24, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 26, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 i {
   margin-left: 2px;
   margin-right: 4px;
 }
 
-/* line 28, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 30, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .btn {
   margin-bottom: 10px;
 }
-/* line 31, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 33, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .btn * {
   padding-right: 5px;
   display: inline-block;
   margin: -1px auto;
   font-weight: 900;
 }
-/* line 37, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 39, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .btn *:last-child {
   padding-right: 0px;
 }
 
-/* line 41, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 43, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .devise-links a {
   display: block;
 }
 
-/* line 44, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 46, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .content {
   height: 100%;
 }
 
-/* line 47, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 49, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .title {
   font-weight: 900;
   font-size: 28px;
 }
 
-/* line 51, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 53, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .text-box {
   border: 1px solid white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px 1px black;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
   display: block;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
   margin-bottom: 5px;
-  padding: 2px;
 }
-/* line 59, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 15, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/mixins.css.sass */
+.text-box:hover {
+  border: 1px solid white;
+  box-shadow: 2px 2px 10px 2px black;
+}
+/* line 58, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .text-box hr {
   margin: 0;
   border: 0;
@@ -10986,98 +11019,84 @@ i {
   background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
-/* line 65, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 64, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .text-box .title {
-  margin: 2px;
+  background: rgba(0, 0, 0, 0.4);
   padding: 2px;
 }
-/* line 69, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 68, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .text-box .title h3 {
   margin: 0;
 }
-/* line 72, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
+/* line 71, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/layout.css.sass */
 .text-box .body {
   margin: 2px;
-  padding: 2px;
-  background: white;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #dfdfdf;
-  border-radius: 4px;
-  min-height: 100px;
+  padding: 4px;
 }
 
 /* line 1, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
 .navbar {
   border-bottom: 4px solid rgba(0, 0, 0, 0.15);
-  z-index: 4;
+  height: 55px;
+  background-color: white;
 }
-/* line 5, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
-.navbar * {
-  z-index: 4;
-}
-/* line 8, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
-.navbar::after, .navbar::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-/* line 14, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
-.navbar::after {
-  background-color: rgba(0, 0, 0, 0.08);
-  z-index: 3;
-  height: 51px;
-}
-/* line 19, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
-.navbar::before {
-  background-image: inherit;
-  height: 50px;
-  z-index: 2;
-}
-/* line 24, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
+/* line 6, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
 .navbar ul.nav > li {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   color: white;
 }
-/* line 28, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
+/* line 10, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
 .navbar ul.nav > li > a {
   color: white;
   font-size: 2.05em;
   font-weight: 500;
 }
-/* line 33, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
+/* line 15, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
 .navbar ul.nav > li:hover, .navbar ul.nav > li.open {
   border-bottom: 4px solid white;
-  margin-bottom: -4px;
+  margin-bottom: -5px;
 }
-/* line 37, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
+/* line 19, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
 .navbar ul.nav > li:hover > a, .navbar ul.nav > li.open > a {
   background-color: rgba(255, 255, 255, 0.2);
 }
-/* line 41, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
-.navbar .avatar {
-  width: 40px;
-  height: 40px;
-  margin: 1% 1px;
-  background: #e0e0e0;
+/* line 22, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
+.navbar .dropdown-toggle {
+  padding: 0 15px;
+  height: 50px;
 }
-/* line 47, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
+/* line 26, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
+.navbar .dropdown-toggle * {
+  margin: auto 0;
+}
+/* line 29, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
+.navbar .dropdown-toggle .avatar {
+  border: 1px solid white;
+  border-radius: 3px;
+  margin: 4px 0;
+  display: inline-block;
+  box-shadow: 1px 1px 1px 1px black;
+}
+/* line 36, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/navbar.css.sass */
 .navbar ul.dropdown-menu a {
   color: black;
   font-weight: 500;
   text-shadow: none;
-  font-size: 2.05em -2em;
+  font-size: 1.15em;
 }
 
 /* line 1, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/posts.css.sass */
-.post-comments-header {
+.post {
+  font-size: 1.25em;
+  margin-bottom: 15px;
+}
+
+/* line 5, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/posts.css.sass */
+.post-comments {
   display: block;
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  margin: 5px initial;
-  padding: 2px;
+  border-radius: 2px;
 }
 
 /* line 1, /home/damian/Projekty/Sylwanit/app/assets/stylesheets/table.css.sass */
