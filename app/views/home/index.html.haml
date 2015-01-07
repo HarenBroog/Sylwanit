@@ -1,3 +1,10 @@
 .row.content
-  .col-sm-8= render categories
-  .col-sm-4= render posts_promoted
+  .col-sm-8.categories
+    .title Categories:
+    = render categories
+  .col-sm-4.promoted-posts
+    .title
+      %i.fa.fa-star
+      Promoted posts:
+    - posts_promoted.each do |post|
+      = render partial: 'posts/post_element', locals: { post: post }

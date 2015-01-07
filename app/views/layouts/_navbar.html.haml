@@ -19,16 +19,17 @@
         - if user_signed_in?
           %li.dropdown
             %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              Logged as
               %strong= current_user.full_name
+              .avatar
+                = image_tag current_user.avatar.thumb.url
               %span.caret
             %ul.dropdown-menu{:role => "menu"}
               %li
                 = link_to edit_user_registration_path do
+                  %i.fa.fa-cog.fa-fw
                   Settings
-                  %i.fa.fa-cog.pull-right
               %li.divider
               %li
                 = link_to destroy_user_session_path, method: :delete do
+                  %i.fa.fa-sign-out.fa-fw
                   Sign out
-                  %i.fa.fa-sign-out.pull-right

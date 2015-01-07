@@ -13,10 +13,14 @@
   .body= post.body
   .post-comments
     .post-comments-header
-      %i.fa.fa-comments.fa-lg
-      %h4.dib Comments:
-      = link_to new_post_comment_path(post), class: 'btn btn-default pull-right' do
-        %i.fa.fa-plus Add comment
+      .row
+        .col-md-3.h4
+          %i.fa.fa-comments.fa-lg
+          %strong Comments:
+        .col-md-2.col-md-offset-7.h4
+          = link_to new_post_comment_path(post) do
+            %i.fa.fa-plus
+            %strong Add comment
     .post-comments-content
       = render post.comments
 
