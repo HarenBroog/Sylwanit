@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'haml-rails'
 
+gem 'asset_sync'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'bourbon'
@@ -21,6 +22,8 @@ gem 'carrierwave'
 gem 'devise'
 gem 'decent_exposure'
 gem 'draper'
+gem 'fog', '~> 1.3.1'
+gem 'mini_magick'
 gem 'simple_form'
 
 gem 'unicorn'
@@ -37,7 +40,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'dotenv-rails'
+  gem 'factory_girl_rails'
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
 end
