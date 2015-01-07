@@ -29,6 +29,6 @@ class RegistrationsController < Devise::RegistrationsController
   private
 
   def resource_params
-    params.require(resource_name).permit(:email, :password, :password_confirmation, :current_password, :first_name, :last_name, :layout)
+    params.require(resource_name).permit(:email, :password, :password_confirmation, :current_password, :first_name, :last_name, :layout, :avatar)
   end
 end

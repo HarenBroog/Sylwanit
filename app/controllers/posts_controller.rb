@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  # load_and_authorize_resource
+  expose(:category) { Category.find_by_id(params[:category_id]) }
   expose(:post, attributes: :post_params)
-  expose(:posts)
+  expose(:posts) { Post.where(category_id: category.try(:id)) }
 
   def index
   end
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body).tap do |whitelisted|
+    params.require(:post).permit(:title, :body, :category_id).tap do |whitelisted|
       whitelisted[:owner_id] = params[:user_id]
     end
   end
