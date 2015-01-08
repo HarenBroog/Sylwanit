@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  after_initialize :defaults
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -9,5 +11,11 @@ class User < ActiveRecord::Base
 
   has_many :posts, inverse_of: :owner
   has_many :comments, inverse_of: :author
+
+  private
+
+  def defaults
+    self.layout ||= 'green'
+  end
 
 end
