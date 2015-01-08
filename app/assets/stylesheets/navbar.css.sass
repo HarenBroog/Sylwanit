@@ -1,6 +1,6 @@
 .navbar
-  border-bottom: 4px solid rgba(0,0,0,.15)
-  height: $navbar-heigth + 5px
+  border-bottom: $navbar-border-bottom-width solid rgba(0,0,0,.15)
+  height: $navbar-heigth + $navbar-border-bottom-width
   background-color: $navbar-background-color
 
   ul.nav > li
@@ -13,8 +13,8 @@
       font-weight: $font-weight-thin
 
     &:hover, &.open
-      border-bottom: 4px solid $navbar-link-border-hover
-      margin-bottom: -5px
+      border-bottom: $navbar-border-bottom-width solid $navbar-link-border-hover
+      margin-bottom: 0px - $navbar-border-bottom-width
 
       > a
         background-color: $navbar-link-background-hover
