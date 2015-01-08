@@ -23,7 +23,7 @@ gem 'decent_exposure'
 gem 'draper'
 gem 'fog', '~> 1.3.1'
 gem 'mini_magick'
-gem 'simple_form'
+gem 'simple_form', '~> 3.1.0.rc2'
 
 gem 'unicorn'
 
