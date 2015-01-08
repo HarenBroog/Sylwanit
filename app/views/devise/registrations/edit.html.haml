@@ -27,9 +27,8 @@
     / = f.input :current_password, autocomplete: 'off', hint: '(we need your current password to confirm your changes)'
     .col-sm-12
       %hr
-    .form-group
+    .form-group.buttons
       .col-sm-offset-3
-        .col-sm-3
+        .container-fluid
           = f.button :submit, 'Update'
-        .col-sm-3
-          = button_to 'Back', :back, class: 'btn btn-default'
+          = link_to 'Back', :back, class: 'btn btn-default'
