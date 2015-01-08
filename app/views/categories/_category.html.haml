@@ -1,7 +1,9 @@
-.category.row
+.category
   = link_to category_posts_path(category) do
-    .col-sm-2.category-icon
-      %i{ class: "fa fa-#{category.icon} fa-2x"}
-    .col-sm-3
-      .category-name= category.name
+    .row
+      .col-sm-2
+        .category-icon
+          %i{ class: "fa fa-#{category.icon} fa-2x"}
+      .col-sm-3
+        .category-name= category.name
 

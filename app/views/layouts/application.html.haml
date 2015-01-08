@@ -7,6 +7,6 @@
     = csrf_meta_tags
   %body{style: "background-image: url('#{background_url}')"}
     = render 'layouts/navbar'
+    .overlay
     .container.content
-      .col-md-12
-        = yield
+      = yield

@@ -1,13 +1,14 @@
-.user-profile.text-box
-  .row.h4
-    .col-xs-1
-      .avatar
-        = image_tag user.avatar.thumb.url
-    .col-xs-2
-      %p= user.first_name
-    .col-xs-2
-      %p= user.last_name
-    .col-xs-3
-      %p= user.email
+.user-profile.user-profile-list
+  = link_to user_path(user) do
+    .row.h4
+      .col-xs-1
+        .user-avatar
+          = image_tag user.avatar.thumb
+      .col-xs-2
+        %p= user.first_name
+      .col-xs-2
+        %p= user.last_name
+      .col-xs-3
+        %p= user.email
 
 
