@@ -17,5 +17,4 @@ class User < ActiveRecord::Base
   def defaults
     self.layout ||= 'green'
   end
-
 end
