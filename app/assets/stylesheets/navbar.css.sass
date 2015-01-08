@@ -24,7 +24,8 @@
     height: $navbar-heigth
 
     *
-      margin: auto 0
+      vertical-align: middle
+      margin: -1% 0
 
     .avatar
       border: $avatar-border-width solid $avatar-border-color
@@ -32,6 +33,7 @@
       margin: ($navbar-heigth - $avatar-size - 2*$avatar-border-width)/2 5px
       display: inline-block
       box-shadow: 1px 1px 1px 1px #000
+      @include avatar-fixed-size($avatar-size, $avatar-border-width)
 
   ul.dropdown-menu a
     color: #000
