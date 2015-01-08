@@ -1,4 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
+
   def update
     self.resource = resource_class.to_adapter.get!(send(:"current_#{resource_name}").to_key)
 
@@ -30,5 +31,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   def resource_params
     params.require(resource_name).permit(:email, :password, :password_confirmation, :current_password, :first_name, :last_name, :layout, :avatar)
+  end
+
+  def sign_up_params
+    resource_params
   end
 end
