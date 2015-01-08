@@ -1,5 +1,14 @@
 = simple_form_for comment, url: post_comments_path, html: { class: 'form-horizontal'}, wrapper: :horizontal_form do |f|
-  = f.association :author, readonly: true, label_method: :email, default: current_user
+  .form-group
+    .col-md-3.control-label
+      %label Author
+    .col-md-9
+      %input.form-control{ value: current_user.email, readonly: true }
+  .form-group
+    .col-md-3.control-label
+      %label Post
+    .col-md-9
+      %input.form-control{ value: post.title, readonly: true }
   = f.hidden_field :post_id, value: post.id
   = f.input :body
 

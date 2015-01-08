@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   expose(:comments)
 
   def create
+    comment.author_id = current_user.id
     comment.save
     path_form
   end
@@ -15,6 +16,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:author_id, :post_id, :body)
+    params.require(:comment).permit(:post_id, :body)
   end
 end
