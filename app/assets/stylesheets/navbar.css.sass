@@ -1,7 +1,14 @@
 .navbar
   border-bottom: $navbar-border-bottom-width solid rgba(0,0,0,.15)
   height: $navbar-heigth + $navbar-border-bottom-width
-  background-color: $navbar-background-color
+
+  .overlay
+    position: fixed
+    top: 0px
+    height: $navbar-heigth + $navbar-border-bottom-width
+    width: 100%
+    background: $navbar-background-color
+
 
   ul.nav > li
     @include transition(all 100ms ease-in-out)
@@ -26,13 +33,6 @@
     *
       vertical-align: middle
       margin: -1% 0
-
-    .avatar
-      border: $avatar-border-width solid $avatar-border-color
-      border-radius: $border-radius
-      margin: ($navbar-heigth - $avatar-size - 2*$avatar-border-width)/2 5px
-      box-shadow: 1px 1px 1px 1px #000
-      @include avatar-fixed-size($avatar-size, $avatar-border-width)
 
   ul.dropdown-menu a
     color: #000

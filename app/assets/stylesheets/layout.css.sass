@@ -2,26 +2,27 @@ body, html
   height: 100%
 
 body
-  padding-top: 60px
   background-image: $background-image
-
   color: $font-color
   text-shadow: 1px 1px 1px #000
   font-family: $font-stack
   font-weight: $font-weight-thiner
   font-size: $font-size
 
+  .overlay
+    @include background-image(linear-gradient(to right, $body-background-side, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-side))
+    position: absolute
+    top: $navbar-heigth + $navbar-border-bottom-width
+    height: 100%
+    width: 100%
+
 a
   color: $font-color
 
-  &:hover, &:visited
+  &:hover, &:visited, &:focus
     color: $font-color
     text-shadow: 0 2px 2px #000
     text-decoration: none
-
-    .avatar
-      box-shadow: 1px 1px 5px 1px #000 !important
-
 
 i
   margin-left: 2px
@@ -45,29 +46,9 @@ i
 
 .content
   height: 100%
+  padding-top: 60px
+  width: $content-width
 
 .title
   font-weight: $font-weight-bolder
   font-size: 28px
-
-.text-box
-  @include border-hover($border-color)
-  display: block
-  margin-bottom: 5px
-
-  hr
-    margin: 0
-    border: 0
-    height: 1px
-    @include background-image(linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)))
-
-  .title
-    background: $text-box-background-color
-    padding: 2px
-
-    h3
-      margin: 0
-
-  .body
-    margin: 2px
-    padding: 4px

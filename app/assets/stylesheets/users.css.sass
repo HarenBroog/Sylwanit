@@ -1,11 +1,27 @@
 .user-profile
-  .avatar
+  &:hover
+    .user-avatar
+      box-shadow: 1px 1px 5px 1px $black !important
+
+  .user-avatar
     border: $avatar-border-width solid $avatar-border-color
     background-color: $avatar-background-color
     border-radius: $border-radius
-    margin: auto 10px
-    box-shadow: 1px 1px 1px 1px #000
-    @include avatar-fixed-size($avatar-size, $avatar-border-width)
+    box-shadow: 1px 1px 1px 1px $black
+    @include avatar-fixed-size($avatar-thumb-size, $avatar-border-width)
 
-  p
-    margin: auto 0px
+  &.user-profile-full
+    .user-avatar
+      border-style: none
+      @include avatar-fixed-size($avatar-preview-size, $avatar-border-width)
+
+
+  &.user-profile-list
+    @include text-box
+    .user-avatar
+      margin: auto 10px
+
+  &.user-profile-navbar
+    .user-avatar
+      margin: ($navbar-heigth - $avatar-thumb-size - 2*$avatar-border-width)/2 5px
+

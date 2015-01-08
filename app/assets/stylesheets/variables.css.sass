@@ -4,8 +4,11 @@ $star-color: #FFE000
 $star-color-dark: #FFEA4C
 
 $max-transparent-background: rgba(0,0,0,0)
+$light-transparent-background: rgba(255,255,255,.1)
 $transparent-background: rgba(0,0,0,.2)
 $dark-transparent-background: rgba(0,0,0,.4)
+$very-dark-transparent-background: rgba(0,0,0,.6)
+
 
 $border-color: $white
 $border-radius: 3px
@@ -24,22 +27,24 @@ $font-weight-thin: 500
 $font-weight-bold: 700
 $font-weight-bolder: 900
 
-$body-background:           #FCFFE6
-$content-background:        #F1F5D5
+$body-background-side:       $light-transparent-background
+$body-background-middle:     $transparent-background
+$content-width: 80%
 
 $text-box-background-color: $dark-transparent-background
 $text-box-border-radius: $border-radius
 
 $navbar-heigth: 50px
 $navbar-border-bottom-width: 5px
-$navbar-background-color:   rgba(255,255,255,1)
+$navbar-background-color:   $dark-transparent-background
 $navbar-font-size: $font-size+1em
 $navbar-link-color:        $white
 $navbar-link-background-hover:        rgba(255,255,255,0.2)
-$navbar-link-border:        $light-gray
+$navbar-link-border:        $very-dark-transparent-background
 $navbar-link-border-hover:  $white
 
-$avatar-size: 40px
+$avatar-thumb-size: 40px
+$avatar-preview-size: 128px
 $avatar-border-width: $border-width
 $avatar-border-color: darken($white, 20%)
 $avatar-background-color: $dark-transparent-background
