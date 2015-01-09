@@ -1,0 +1,15 @@
+@keyframes flip
+  0%
+  100%
+    @include transform(rotateY(180deg))
+
+@keyframes shake
+  0%
+  25%
+    @include transform(translateY(1px))
+  50%
+    @include transform(translateY(0px))
+  75%
+    @include transform(translateY(-1px))
+  100%
+    @include transform(translateY(0px))
