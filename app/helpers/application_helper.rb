@@ -1,7 +1,7 @@
 module ApplicationHelper
   def background_url
     url = "#{s3_asset_url}/backgrounds/"
-    return image_url(url + "background-green.jpg") unless current_user
+    return image_url(url + "background-tweed.jpg") unless current_user
     image_url(url + current_user.background_url)
   end
 
