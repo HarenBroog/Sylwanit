@@ -19,10 +19,12 @@
       font-size: $navbar-font-size
       font-weight: $font-weight-thin
 
-    &:hover, &.open, &.active, & > a:focus, & > a:hover
+    &:hover, &.open, &.active, &:not(.dropdown) > a:focus, &:not(.dropdown) > a:hover
       border-bottom: $navbar-border-bottom-width solid $navbar-link-border-hover
       margin-bottom: 0px - $navbar-border-bottom-width
-      background-color: $navbar-link-background-hover
+
+      &, &.dropdown > a
+        background-color: $navbar-link-background-hover
 
   .dropdown-toggle
     padding: 0 15px
