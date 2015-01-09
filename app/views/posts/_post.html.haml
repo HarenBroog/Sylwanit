@@ -21,6 +21,10 @@
               = link_to user_path(post.owner) do
                 %strong= post.owner.email
               says:
+        .post-title.h4
+          .row
+            .col-md-12
+              %strong= post.title
         .post-body.h4
           .row
             .col-md-12
