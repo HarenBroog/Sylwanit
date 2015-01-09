@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :category_id).tap do |whitelisted|
+    params.require(:post).permit(:title, :body, :category_id, :photo).tap do |whitelisted|
       whitelisted[:owner_id] = params[:user_id]
     end
   end
