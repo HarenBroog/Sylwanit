@@ -1,6 +1,6 @@
 .comment
-  .comment-author
-    %strong Author:
-    = link_to comment.author.email, user_path(comment.author)
-  .comment-body
+  .comment-author.h5
+    %strong= link_to comment.author.email, user_path(comment.author)
+    says:
+  .comment-body.h5
     = comment.body

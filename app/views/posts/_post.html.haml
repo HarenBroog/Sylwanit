@@ -1,7 +1,7 @@
-=link_to post_path(post) do
-  .post
-    .row
-      .col-md-2
+.post
+  .row
+    .col-md-2
+      = link_to post_path(post) do
         .post-photo
           - if post.photo?
             = image_tag post.photo.preview
@@ -10,17 +10,21 @@
               %span
                 %i.fa.fa-times.fa-2x
                 %p no photo
-      .col-md-10
-        .post-header.h4
-          .row
-            .col-md-2
-              = link_to user_path(post.owner) do
-                .user-avatar
-                  = image_tag post.owner.avatar.thumb
-            .col-md-10
+    .col-md-10
+      .post-header
+        .row
+          .col-md-8.h4
+            = link_to user_path(post.owner) do
+              .user-avatar
+                = image_tag post.owner.avatar.thumb
               = link_to user_path(post.owner) do
                 %strong= post.owner.email
-              says:
+              %p says:
+          .col-md-4
+            .pull-right
+              Published at:
+              %strong= format_time(post.created_at)
+      = link_to post_path(post) do
         .post-title.h4
           .row
             .col-md-12
@@ -29,13 +33,16 @@
           .row
             .col-md-12
               = post.body
+  = link_to post_path(post) do
     .post-footer.row
       .col-md-7.col-md-offset-2
         %i.fa.fa-comments
         Comments:
         %strong= post.comments.count
       .col-md-3
-        .pull-right
-          Published at:
-          %strong= format_time(post.created_at)
+
+
+.post
+  .row
+    = yield :comments if content_for?(:comments)
 
