@@ -36,31 +36,15 @@
     left: 0
     right: 0
 
-=text-box
-  @include border-hover($border-color)
-  display: block
-  margin-bottom: 5px
-
-  hr
-    margin: 0
-    border: 0
-    height: 1px
-    @include background-image(linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)))
-
-  .title
-    background: $text-box-background-color
-    padding: 2px
-
-    h3
-      margin: 0
-
-  .body
-    margin: 2px
-    padding: 4px
-
 =dark-box($padding)
   font-size: $font-size + .2em
   margin-bottom: 5px
   background: $dark-transparent-background
   padding: $padding
   border-radius: $border-radius
+
+=dark-box-hover
+  @include transition(all 100ms ease-in-out)
+
+  &:hover
+    box-shadow: 2px 2px 6px 2px $black

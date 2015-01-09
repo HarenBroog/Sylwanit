@@ -9,17 +9,18 @@
       color: $star-color
 
   .post
-    padding: 4px
-    @include border-hover($star-color)
+    @include dark-box(4px)
+    @include dark-box-hover
 
-    a:hover
+    &:hover .post-title
       color: $star-color
 
   .category
     margin-bottom: 5px
     margin-right: 5px
     cursor: pointer
-    @include border-hover($border-color)
+    @include dark-box(0px)
+    @include dark-box-hover
 
     .category-icon i
       @include transition(all 1000ms ease-in-out)
@@ -34,9 +35,9 @@
 
     .category-icon
       background: $transparent-background
-      border-right: 1px solid $dark-gray
+      border-right: 2px solid $dark-transparent-background
+      text-align: center
 
       i
-        margin: 8px 30%
-        font-size: $font-size+2em
-
+        margin: 8px auto
+        font-size: $font-size + 2em
