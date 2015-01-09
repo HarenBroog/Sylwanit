@@ -41,8 +41,8 @@
         %strong= post.comments.count
       .col-md-3
 
-
-.post
-  .row
-    = yield :comments if content_for?(:comments)
+- if content_for?(:comments)
+  .post
+    .row
+      = yield :comments
 
