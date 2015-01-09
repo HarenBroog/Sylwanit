@@ -1,6 +1,4 @@
-.row
-  .col-sm-6.col-sm-offset-6
-    / = link_to new_user_post_path(current_user), class: 'pull-right' do
-    /   .btn.btn-success
-    /     %i.fa.fa-plus.fa-lg
-= render posts
+- if posts_displayed.present?
+  = render posts_displayed
+- else
+  = render partial: 'shared/no_content', locals: { resource: params[:controller] }
