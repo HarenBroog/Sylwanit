@@ -8,4 +8,8 @@ module ApplicationHelper
   def s3_asset_url
     "#{ENV['S3_ASSET_URL']}/#{ENV['S3_BUCKET_NAME']}/assets"
   end
+
+  def format_time(time)
+    time.strftime('%d/%m/%Y %H:%M')
+  end
 end

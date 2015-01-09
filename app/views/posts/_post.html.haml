@@ -26,8 +26,12 @@
             .col-md-12
               = post.body
     .post-footer.row
-      .col-md-10.col-md-offset-2
+      .col-md-7.col-md-offset-2
         %i.fa.fa-comments
         Comments:
         %strong= post.comments.count
+      .col-md-3
+        .pull-right
+          Published at:
+          %strong= format_time(post.created_at)
 
