@@ -7,17 +7,17 @@
           %i.fa.fa-wheelchair.fa-lg
           %strong Sylwanit
       - if user_signed_in?
-        %li
-          = link_to users_path do
+        %li{ class: params[:controller] == 'users' ? 'active' : '' }
+          = link_to users_path, class: "active" do
             %i.fa.fa-users.fa-lg
             %strong Users
-        %li
+        %li{ class: params[:controller] == 'posts' ? 'active' : '' }
           = link_to posts_path do
             %i.fa.fa-book.fa-lg
             %strong Posts
     %ul.nav.navbar-nav.navbar-right
       - if user_signed_in?
-        %li.dropdown
+        %li.dropdown{ class: params[:controller] == 'registrations' ? 'active' : '' }
           %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
             .user-profile.user-profile-navbar
               %strong= current_user.full_name
