@@ -21,6 +21,12 @@
     cursor: pointer
     @include border-hover($border-color)
 
+    .category-icon i
+      @include transition(all 1000ms ease-in-out)
+
+    &:hover .category-icon i
+      @include transform(rotateY(160deg) scale(1.2))
+
     .category-name
       padding: auto 15px
       margin: 1% 0
