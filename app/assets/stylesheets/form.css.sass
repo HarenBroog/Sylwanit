@@ -1,50 +1,50 @@
 .form
   border: $form-border-width solid $form-border-color
   border-radius: $form-border-radius
-  box-shadow: 4px 4px 10px 1px #000
-  margin-top: 15px
-  margin-bottom: 15px
-
-  a.btn
-    text-shadow: none
+  box-shadow: 4px 4px 10px 1px $black
 
   .checkbox label
     font-weight: bold
 
-  .form-group.boolean
-    margin-top: -20px
+  .form-section:last-child
+    border-bottom: none
+    box-shadow: none
 
-  .form-group.shared-links, .form-group.buttons
-    margin-bottom: 0px
-
-    .devise-links a
-      font-weight: bold
-      font-size: $font-size + 0.3em
-
-  hr
-    margin: 0 -15px
-    border: 0
-    height: 2px
-    background: $form-border-color
-
-  form
+  .form-section
+    border-bottom: $form-border-width solid $form-border-color
+    box-shadow: 0px 2px 1px -1px $black
     padding: 15px 0px
 
-    hr
-      margin: 0 -30px
-      margin-bottom: 15px
-      border: 0
-      height: 2px
-      background: $form-border-color
+    .form-group:first-child
+      margin-top: 5px
 
-    .btn
-      display: inline-block
-      font-weight: $font-weight-bold
+    .form-group
+      &.boolean
+        margin-top: -20px
+        margin-bottom: 0px
 
+      &.buttons, &.shared-links
+        margin-bottom: 0px
+
+        & + .form-group.shared-links
+          padding-top: 5px
+
+        .devise-links a
+          display: block
+          color: $form-devise-link-color
+          text-shadow: 1px 1px 2px $black
+          font-weight: $font-weight-bolder
+          font-style: italic
+          font-size: $font-size + 0.4em
+          @include transition(all 100ms ease-in-out)
+
+          &:hover
+            @include animation(shake 0.18s 2 ease-in)
+
+  form
     label
       font-size: $font-size + 0.3em
 
   .title
-    padding: 20px 15px
     font-weight: $font-weight-bolder
     font-size: 24px

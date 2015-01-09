@@ -3,16 +3,19 @@
     .col-md-3.control-label
       %label Author
     .col-md-9
-      %input.form-control{ value: current_user.email, readonly: true }
+      %input.form-control{ value: current_user.email, disabled: true }
   .form-group
     .col-md-3.control-label
       %label Post
     .col-md-9
-      %input.form-control{ value: post.title, readonly: true }
+      %input.form-control{ value: post.title, disabled: true }
   = f.hidden_field :post_id, value: post.id
   = f.input :body
 
   .col-md-12
     %hr
   .form-group.buttons
-    .col-md-9.col-md-offset-3= f.button :submit
+    .col-sm-9.col-sm-offset-3
+      .btn-group
+        = f.button :submit, 'Create', class: 'btn-success'
+        = link_to 'Back', :back, class: 'btn btn-default'

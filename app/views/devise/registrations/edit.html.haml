@@ -1,22 +1,25 @@
 .col-md-6.col-md-offset-3.form
-  .title Edit #{resource_name.to_s.humanize}
-  %hr
   = simple_form_for(resource,
                     as: resource_name,
                     url: registration_path(resource_name),
-                    html: { method: :put, class: 'form-horizontal col-md-12' },
+                    html: { method: :put, class: 'form-horizontal' },
                     wrapper: :horizontal_form)  do |f|
     / = devise_error_messages!
-    = f.input :email, autofocus: true
-    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-      %div
-        Currently waiting confirmation for: #{resource.unconfirmed_email}
-    = f.input :first_name
-    = f.input :last_name
-    = f.input :avatar, wrapper: :horizontal_file_input
-    = f.hidden_field :avatar_cache
+    .form-section.row
+      .col-md-12
+        .title Edit #{resource_name.to_s.humanize}
+    .form-section.row
+      .col-md-12
+        = f.input :email, autofocus: true
+        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+          %div
+            Currently waiting confirmation for: #{resource.unconfirmed_email}
+        = f.input :first_name
+        = f.input :last_name
+        = f.input :avatar, wrapper: :horizontal_file_input
+        = f.hidden_field :avatar_cache
 
-    = f.input :layout, collection: %w(red blue violet calm green tweed), include_blank: false, selected: current_user.layout
+        = f.input :layout, collection: %w(red blue violet calm green tweed), include_blank: false, selected: current_user.layout
     / .col-sm-12
     /   %hr
     / = f.input :password, autocomplete: 'off', hint: "(leave blank if you don't want to change it)"
@@ -25,10 +28,10 @@
     / .col-sm-12
     /   %hr
     / = f.input :current_password, autocomplete: 'off', hint: '(we need your current password to confirm your changes)'
-    .col-sm-12
-      %hr
-    .form-group.buttons
-      .col-sm-offset-3
-        .container-fluid
-          = f.button :submit, 'Update'
-          = link_to 'Back', :back, class: 'btn btn-default'
+    .form-section.row
+      .col-md-12
+        .form-group.buttons
+          .col-sm-9.col-sm-offset-3
+            .btn-group
+              = f.button :submit, 'Update', class: 'btn-success'
+              = link_to 'Back', :back, class: 'btn btn-default'

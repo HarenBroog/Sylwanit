@@ -1,5 +1,5 @@
-.post.text-box
-  .title
+.post
+  .post-title
     .row
       .col-md-3
         .h4
@@ -10,7 +10,7 @@
           %strong Author:
           = link_to post.owner.email, user_path(post.owner)
     %hr
-  .body= post.body
+  .post-body= post.body
   .post-comments
     .post-comments-header
       .row
