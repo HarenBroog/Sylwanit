@@ -1,10 +1,7 @@
 .row
-  .col-sm-6
-    .title Posts:
-  .col-sm-6
+  .col-sm-6.col-sm-offset-6
     = link_to new_user_post_path(current_user), class: 'pull-right' do
       .btn.btn-success
         %i.fa.fa-plus
         %h3 New Post
-
 = render posts
