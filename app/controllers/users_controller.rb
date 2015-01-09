@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   expose(:user, attributes: :user_params)
-  expose(:users)
+  expose(:users) { User.sorted }
 
   private
 

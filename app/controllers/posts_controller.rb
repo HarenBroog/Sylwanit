@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
   expose(:category) { Category.find_by_id(params[:category_id]) }
+  expose(:category_posts) { category.posts.sorted }
+
   expose(:post, attributes: :post_params)
-  expose(:posts) { category ? category.posts : Post.all }
+  expose(:posts) { Post.sorted }
+
+  expose(:posts_displayed) { category ? category_posts : posts }
 
   def index
   end
