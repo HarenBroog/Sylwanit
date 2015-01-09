@@ -1,27 +1,33 @@
-.post
-  .post-title
+=link_to post_path(post) do
+  .post
     .row
-      .col-md-3
-        .h4
-          %strong Title:
-          = post.title
-      .col-md-4
-        .h4
-          %strong Author:
-          = link_to post.owner.email, user_path(post.owner)
-    %hr
-  .post-body= post.body
-  .post-comments
-    .post-comments-header
-      .row
-        .col-md-3.h4
-          %i.fa.fa-comments.fa-lg
-          %strong Comments:
-        .col-md-2.col-md-offset-7.h4
-          = link_to new_post_comment_path(post) do
-            %i.fa.fa-plus
-            %strong Add comment
-    .post-comments-content
-      = render post.comments
-
+      .col-md-2
+        .post-photo
+          - if post.photo?
+            = image_tag post.photo.preview
+          -else
+            .post-no-photo
+              %span
+                %i.fa.fa-times.fa-2x
+                %p no photo
+      .col-md-10
+        .post-header.h4
+          .row
+            .col-md-2
+              = link_to user_path(post.owner) do
+                .user-avatar
+                  = image_tag post.owner.avatar.thumb
+            .col-md-10
+              = link_to user_path(post.owner) do
+                %strong= post.owner.email
+              says:
+        .post-body.h4
+          .row
+            .col-md-12
+              = post.body
+    .post-footer.row
+      .col-md-10.col-md-offset-2
+        %i.fa.fa-comments
+        Comments:
+        %strong= post.comments.count
 

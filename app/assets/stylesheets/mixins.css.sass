@@ -16,9 +16,15 @@
     border: $border-width solid $hover-border-color
     box-shadow: 2px 2px 10px 2px $black
 
-=avatar-fixed-size($size, $border-width)
-  width: $size + 2*$border-width
-  height: $size + 2*$border-width
+=image-container
+  border: $avatar-border-width solid $avatar-border-color
+  background-color: $avatar-background-color
+  border-radius: $border-radius
+  box-shadow: 1px 1px 1px 1px $black
+
+=image-fixed-size($size)
+  width: $size + 2*$avatar-border-width
+  height: $size + 2*$avatar-border-width
   position: relative
   display: inline-block
 

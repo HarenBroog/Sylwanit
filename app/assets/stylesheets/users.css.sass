@@ -1,19 +1,16 @@
-.user-profile
+.user-profile, .post-header
   &:hover
     .user-avatar
       box-shadow: 1px 1px 5px 1px $black !important
 
   .user-avatar
-    border: $avatar-border-width solid $avatar-border-color
-    background-color: $avatar-background-color
-    border-radius: $border-radius
-    box-shadow: 1px 1px 1px 1px $black
-    @include avatar-fixed-size($avatar-thumb-size, $avatar-border-width)
+    @include image-container
+    @include image-fixed-size($avatar-thumb-size)
 
   &.user-profile-full
     .user-avatar
       border-style: none
-      @include avatar-fixed-size($avatar-preview-size, $avatar-border-width)
+      @include image-fixed-size($avatar-preview-size)
 
   &.user-profile-list
     @include text-box
