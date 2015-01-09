@@ -36,9 +36,15 @@
   = link_to post_path(post) do
     .post-footer.row
       .col-md-7.col-md-offset-2
-        %i.fa.fa-comments
-        Comments:
-        %strong= post.comments.count
+        .post-footer-section
+          %i.fa.fa-comments
+          Comments:
+          %strong= post.comments.count
+        .post-footer-section
+          = link_to new_post_comment_path(post) do
+            %i.fa.fa-plus
+            Add
+
       .col-md-3
 
 - if content_for?(:comments)
