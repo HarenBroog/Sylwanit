@@ -24,15 +24,15 @@
             .pull-right
               Published at:
               %strong= format_time(post.created_at)
-      = link_to post_path(post) do
-        .post-title.h4
-          .row
-            .col-md-12
+      .post-title.h4
+        .row
+          .col-md-12
+            = link_to post_path(post) do
               %strong= post.title
-        .post-body.h4
-          .row
-            .col-md-12
-              = post.body
+      .post-body.h4
+        .row
+          .col-md-12
+            = post.body
   = link_to post_path(post) do
     .post-footer.row
       .col-md-7.col-md-offset-2
